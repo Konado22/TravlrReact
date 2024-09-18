@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 export default function tripCard() {
-    return (
-      <div>
-        <h1>Beginning application</h1>
-      </div>
-    );
-  }
+  return (
+    <div className="card">
+     
+    </div>
+  );
+}

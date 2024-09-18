@@ -1,9 +1,9 @@
-import Image from "next/image";
+import navbar from "./navbar/page";
 
 export default function Home() {
   return (
     <div>
-      <h1>Beginning application</h1>
+    
     </div>
   );
 }

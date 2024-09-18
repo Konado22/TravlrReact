@@ -1,7 +1,9 @@
-export default function navbar () {
-    return (
-      <div>
-        <h1>Beginning application</h1>
-      </div>
-    );
-  }
+
+
+export default function navbar() {
+  return (
+    <nav className="navbar navbar-expand navbar-light bg-light">
+
+    </nav>
+  );
+}
