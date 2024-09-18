@@ -2,10 +2,12 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <>
-            <Link href='/'><img src="../public/logo.png"/></Link>
-            <Link href='/tripList'><h1>Trips</h1></Link>
-            <Link href='/login'><h1>Login</h1></Link>
-        </>
+        <div className="container mx-auto flex-row">
+            <div><Link href='/'><img src="../logo.png" /></Link></div>
+            <div><Link href='/tripList'><h1 className="">Trips</h1></Link></div>
+            <div><Link href='/login'><h1 className="">Login</h1></Link></div>
+
+        </div>
+
     );
-  }
+}
