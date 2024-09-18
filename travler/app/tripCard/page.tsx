@@ -1,3 +1,5 @@
+import '../seedData/trips.json';
+
 export default function Tripcard () {
     return (
         <>
