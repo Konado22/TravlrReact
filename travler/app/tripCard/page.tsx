@@ -1,5 +1,7 @@
 
-
+/*indvidual trip card
+adding state for accordian
+and page redirect to individual trip page*/
 export default function Tripcard () {
     return (
         <>

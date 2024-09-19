@@ -1,8 +1,9 @@
 
-
+//loop to iterate over data from seed file until database integration
 export default function Triplist() {
     return (
         <>
+        this is the trip listing Page
         {/* {data.forEach(element => {
             <>
                 <img src="`${element.image}`"></img>
