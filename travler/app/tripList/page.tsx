@@ -1,18 +1,13 @@
+'use server'
+//import { promises as fs } from 'fs';
 
 //loop to iterate over data from seed file until database integration
-export default function Triplist() {
+export default async function Triplist() {
+    //const file = await fs.readFile(process.cwd() + '/app/seedData/trips.json', 'utf8');
+    //const data = JSON.parse(file);
     return (
         <>
-        this is the trip listing Page
-        {/* {data.forEach(element => {
-            <>
-                <img src="`${element.image}`"></img>
-                <h1>`${element.name}`</h1>
-                <h2>{element.price}</h2>
-                <h3>{element.description}</h3>
-            </>
-        })
-        } */}
+
         </>
     );
-  }
+}
