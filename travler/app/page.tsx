@@ -10,7 +10,7 @@ export default function Home() {
           <Image src="/logo.png" width={400} height={400} alt='logo' />
         </div>
         <div className="flex justify-center">
-          <h1 className="text-8xl text-orange-300 font-mono ease-in">Welcome to Travlr</h1>
+          <h1 className="transition-opacity text-8xl text-orange-300 font-mono">Welcome to Travlr</h1>
         </div>
       </div>
       <div className="flex justify-center">
@@ -23,3 +23,4 @@ export default function Home() {
     </div>
   );
 }
+// root directory page, implement animation for opacity in title to capture attention, carousel library

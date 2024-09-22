@@ -21,7 +21,7 @@ export default function Login() {
                     <button className="text-orange-400 text-3xl justify-center rounded-md hover:text-white hover:underline" type="submit">Login</button>
                 </div>
                 <div className="flex justify-center">
-                    <Link href='/registerUser'><h1 className="text-orange-400 hover:underline hover:text-white text-2xl">New User?</h1></Link>
+                    <Link href='/registerUser'><h1 className="text-orange-400 hover:underline hover:text-white text-xl">New User?</h1></Link>
                 </div>
                 <div className="flex justify-center">
                     {/*find different arrow to use*/}

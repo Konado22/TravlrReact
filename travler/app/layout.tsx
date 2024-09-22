@@ -33,3 +33,4 @@ export default function RootLayout({
     </html>
   );
 }
+//main layout page

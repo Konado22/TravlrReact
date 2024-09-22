@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-
+//register new user page
 export default async function RegisterUser() {
 
     return (
@@ -20,7 +20,7 @@ export default async function RegisterUser() {
                     <button className="text-orange-400 text-3xl justify-center rounded-md hover:text-white hover:underline" type="submit">Login</button>
                 </div>
                 <div className="flex justify-center">
-                    <Link href='/login'><h1 className="text-orange-400 hover:underline hover:text-white text-2xl">Already have an account?</h1></Link>
+                    <Link href='/login'><h1 className="text-orange-400 hover:underline hover:text-white text-xl">Already have an account?</h1></Link>
                 </div>
                 <div className="flex justify-center">
                     {/*find different arrow to use*/}
