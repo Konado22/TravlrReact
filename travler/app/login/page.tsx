@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from 'next/link';
 
 //login page will incorperate logic to allow user access to account
 //eventually aim to incoperate register user button for new user form

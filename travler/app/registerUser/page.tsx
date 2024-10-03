@@ -1,8 +1,20 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
+import { db } from "@vercel/postgres";
+import { sql } from "@vercel/postgres";
+import Document from "next/document";
 //register new user page
 export default async function RegisterUser() {
+   
 
+    const client = await db.connect();
+    // const registerQuery =  async () => {
+    //     try {
+    //         //await sql`INSERT INTO users (email,password)
+    // //VALUES(${username}, ${password})`;
+    //     } catch {
+    //         console.error("POST REQUEST FAILURE AND ABORT");
+    //     }}
     return (
         <div className=" flex-col grid justify-center space-y-20 min-w-max">
             <div className="justify-items-center">
@@ -11,13 +23,13 @@ export default async function RegisterUser() {
             </div>
             <div className="space-y-10">
                 <div className="flex justify-center">
-                    <input className="fill-slate-400 text-xl" type="email" placeholder="username"></input>
+                    <input id='username'className="fill-slate-400 text-xl" type="username" placeholder="username"></input>
                 </div>
                 <div className="flex justify-center">
-                    <input className='fill-slate-400 text-xl' type="password" placeholder="password"></input>
+                    <input id='password' className='fill-slate-400 text-xl' type="password" placeholder="password"></input>
                 </div>
                 <div className="flex justify-center">
-                    <button className="text-orange-400 text-3xl justify-center rounded-md hover:text-white hover:underline" type="submit">Login</button>
+                    <button className="text-orange-400 text-3xl justify-center rounded-md hover:text-white hover:underline" type="submit" >Create Account</button>
                 </div>
                 <div className="flex justify-center">
                     <Link href='/login'><h1 className="text-orange-400 hover:underline hover:text-white text-xl">Already have an account?</h1></Link>
