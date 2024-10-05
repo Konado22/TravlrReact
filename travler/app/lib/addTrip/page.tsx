@@ -1,9 +1,7 @@
-import conn from '../dbConnect';
-import { db } from '@vercel/postgres';
 import { sql } from '@vercel/postgres';
 
 export default async function addTrip () {
-    const addQuery = conn.
+    //post request to add a new trip on click (FORM) TRIP(code, name, resort, perPerson, image)
     return (
         <>
         </>
