@@ -3,14 +3,14 @@ import Link from "next/link";
 import { db } from "@vercel/postgres";
 import { sql } from "@vercel/postgres";
 import Document from "next/document";
-//register new user page
+//register new user page within database
 export default async function RegisterUser() {
    
 
     const client = await db.connect();
     // const registerQuery =  async () => {
     //     try {
-    //         //await sql`INSERT INTO users (email,password)
+    //         //await client.sql`INSERT INTO users (email,password)
     // //VALUES(${username}, ${password})`;
     //     } catch {
     //         console.error("POST REQUEST FAILURE AND ABORT");
