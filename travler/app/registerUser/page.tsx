@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { db } from "@vercel/postgres";
-import { sql } from "@vercel/postgres";
-import Document from "next/document";
 //register new user page within database
 export default async function RegisterUser() {
    

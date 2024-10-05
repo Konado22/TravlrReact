@@ -1,6 +1,9 @@
+import conn from '../dbConnect';
+import { db } from '@vercel/postgres';
+import { sql } from '@vercel/postgres';
+
 export default async function addTrip () {
-    //future implementation to add trip to database (admin only one with create permissions
-    //through cookie indicator)
+    const addQuery = conn.
     return (
         <>
         </>
