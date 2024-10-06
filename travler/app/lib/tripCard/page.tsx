@@ -5,7 +5,6 @@
 // Description : Implement logic for singular trip component
 //============================================================================
 import { sql } from "@vercel/postgres";
-import { get } from "http";
 //imports sql functionality from vercel
 
  export default async function Tripcard () {
