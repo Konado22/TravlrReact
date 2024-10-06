@@ -1,3 +1,10 @@
+//============================================================================
+// Name        : dbConnect.js
+// Author      : Jesse Draper
+// Version     : 1.0
+// Copyright   : Copyright © 2017 SNHU COCE
+// Description : One method of creating a connection with Postgres Database
+//============================================================================
 import {Pool} from 'pg';
 //only essential if building clientConnection. Can also utilize vercel/db and vercel/sql to perform database querries
 let conn;

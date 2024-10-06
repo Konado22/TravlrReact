@@ -1,6 +1,14 @@
+//============================================================================
+// Name        : registerUser/page.tsx
+// Author      : Jesse Draper
+// Version     : 1.0
+// Copyright   : Copyright © 2017 SNHU COCE
+// Description : Future logic for creating new user in user table. Register user page
+//============================================================================
 import Image from "next/image";
 import Link from "next/link";
 import { sql } from "@vercel/postgres";
+//FUTURE IMPLEMENTATION FOR CREATING A NEW USER
 //register new user page within database
 export default async function RegisterUser() {
    

@@ -1,6 +1,13 @@
+//===============================================================================
+// Name        : page.tsx
+// Author      : Jesse Draper
+// Version     : 1.0
+// Copyright   : Copyright © 2017 SNHU COCE
+// Description : main root component. Landing page with redirects for application
+//===============================================================================
 import Image from "next/image";
 import Link from "next/link";
-//homepage
+//homepage, utilize Image for nextjs image formatting and link to route browser
 export default function Home() {
   return (
     <div className="flex flex-col gap-y-5">
@@ -23,4 +30,4 @@ export default function Home() {
     </div>
   );
 }
-// root directory page, implement animation for opacity in title to capture attention, carousel library
+// root directory page

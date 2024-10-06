@@ -1,5 +1,13 @@
+//=================================================================================
+// Name        : tripList/page.tsx
+// Author      : Jesse Draper
+// Version     : 1.0
+// Copyright   : Copyright © 2017 SNHU COCE
+// Description : Logic to get all trips from trip table and load as JSX component
+//=================================================================================
 import { sql } from "@vercel/postgres";
-//loop to iterate over data from seed file until database integration, will integrate with backend
+//imports sql functionality from vercel
+//get ALL trips, pass to dashboard for rendering
   const TripList = async () => {
     const res = await sql`SELECT * FROM trip`;
     const tripResults = res.rows;

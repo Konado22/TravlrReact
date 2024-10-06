@@ -1,6 +1,13 @@
+//===========================================================================================
+// Name        : login/page.tsx
+// Author      : Jesse Draper
+// Version     : 1.0
+// Copyright   : Copyright © 2017 SNHU COCE
+// Description : future functionality for login POST request to server function. Login page
+//===========================================================================================
 import Image from "next/image";
 import Link from 'next/link';
-
+//FUTURE IMPLEMENTATION FOR USER ACCESS
 //login page will incorperate logic to allow user access to account
 //eventually aim to incoperate register user button for new user form
 export default function Login() {

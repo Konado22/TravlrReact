@@ -1,3 +1,10 @@
+//============================================================================
+// Name        : navbar/page.tsx
+// Author      : Jesse Draper
+// Version     : 1.0
+// Copyright   : Copyright © 2017 SNHU COCE
+// Description : Navbar component for dashboard page
+//============================================================================
 import Image from "next/image";
 import Link from "next/link";
 //navbar for main dashboard page, future functionality to incoperate categories and blog stories
