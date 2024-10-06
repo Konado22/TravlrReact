@@ -4,7 +4,7 @@
 // Version     : 1.0
 // Description : Logic for updating a trip by trip.code
 //============================================================================
-//import { sql } from "@vercel/postgres";
+import { sql } from "@vercel/postgres";
 //imports sql functionality from vercel
 
 
