@@ -2,7 +2,6 @@
 // Name        : registerUser/page.tsx
 // Author      : Jesse Draper
 // Version     : 1.0
-// Copyright   : Copyright © 2017 SNHU COCE
 // Description : Future logic for creating new user in user table. Register user page
 //============================================================================
 import Image from "next/image";

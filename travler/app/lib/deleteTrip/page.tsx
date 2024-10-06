@@ -2,7 +2,6 @@
 // Name        : deleteTrip/page.tsx
 // Author      : Jesse Draper
 // Version     : 1.0
-// Copyright   : Copyright © 2017 SNHU COCE
 // Description : Logic for deleting a trip based upon trip.code
 //============================================================================
 import { sql } from "@vercel/postgres"

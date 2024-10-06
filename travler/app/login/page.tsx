@@ -2,7 +2,6 @@
 // Name        : login/page.tsx
 // Author      : Jesse Draper
 // Version     : 1.0
-// Copyright   : Copyright © 2017 SNHU COCE
 // Description : future functionality for login POST request to server function. Login page
 //===========================================================================================
 import Image from "next/image";

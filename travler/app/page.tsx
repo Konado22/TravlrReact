@@ -2,7 +2,6 @@
 // Name        : page.tsx
 // Author      : Jesse Draper
 // Version     : 1.0
-// Copyright   : Copyright © 2017 SNHU COCE
 // Description : main root component. Landing page with redirects for application
 //===============================================================================
 import Image from "next/image";

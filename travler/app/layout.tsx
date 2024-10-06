@@ -2,7 +2,6 @@
 // Name        : layout.tsx
 // Author      : Jesse Draper
 // Version     : 1.0
-// Copyright   : Copyright © 2017 SNHU COCE
 // Description : tailwind global css layout for root directory
 //============================================================================
 import type { Metadata } from "next";

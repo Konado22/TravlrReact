@@ -2,7 +2,6 @@
 // Name        : dashboard/page.tsx
 // Author      : Jesse Draper
 // Version     : 1.0
-// Copyright   : Copyright © 2017 SNHU COCE
 // Description : Render of dashboard page with components
 //============================================================================
 import Navbar from "../navbar/page";

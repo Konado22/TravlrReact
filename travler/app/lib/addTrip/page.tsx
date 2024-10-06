@@ -2,7 +2,6 @@
 // Name        : addTrip/page.tsx
 // Author      : Jesse Draper
 // Version     : 1.0
-// Copyright   : Copyright © 2017 SNHU COCE
 // Description : Backend logic to create a new trip in trip database table
 //============================================================================
 import { sql } from '@vercel/postgres';

@@ -2,7 +2,6 @@
 // Name        : tripList/page.tsx
 // Author      : Jesse Draper
 // Version     : 1.0
-// Copyright   : Copyright © 2017 SNHU COCE
 // Description : Logic to get all trips from trip table and load as JSX component
 //=================================================================================
 import { sql } from "@vercel/postgres";
