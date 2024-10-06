@@ -1,18 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { db } from "@vercel/postgres";
+import { sql } from "@vercel/postgres";
 //register new user page within database
 export default async function RegisterUser() {
    
-
-    const client = await db.connect();
-    // const registerQuery =  async () => {
-    //     try {
-    //         //await client.sql`INSERT INTO users (email,password)
-    // //VALUES(${username}, ${password})`;
-    //     } catch {
-    //         console.error("POST REQUEST FAILURE AND ABORT");
-    //     }}
     return (
         <div className=" flex-col grid justify-center space-y-20 min-w-max">
             <div className="justify-items-center">
