@@ -6,7 +6,7 @@
 //============================================================================
 import Image from "next/image";
 import Link from "next/link";
-import { sql } from "@vercel/postgres";
+//import { sql } from "@vercel/postgres";
 //FUTURE IMPLEMENTATION FOR CREATING A NEW USER
 //register new user page within database
 export default async function RegisterUser() {
