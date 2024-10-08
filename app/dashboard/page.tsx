@@ -6,6 +6,7 @@
 //============================================================================
 import Navbar from "../navbar/page";
 import TripList from "../lib/tripList/page";
+import React from "react";
 //main dashboard of application renders navbar component as well as server-call to get tripList
 export default async function Dashboard() {
     //use server call allows for accessing server in static component
