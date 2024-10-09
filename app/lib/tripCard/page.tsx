@@ -9,6 +9,6 @@ import { sql } from "@vercel/postgres";
 
  export default async function Tripcard () {
     //get singular trip by code
-    const getATrip = await sql`SELECT * from trip WHERE code = $ `;
+    const getATrip = await sql`SELECT * from trip WHERE code = $`;
     const result= getATrip.fields;
   }

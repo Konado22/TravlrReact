@@ -11,14 +11,14 @@ import React from "react";
 export default async function Dashboard() {
     //use server call allows for accessing server in static component
     "use client"
+    //return navbar component, and Triplist get request from server
     return (
         <>
             <Navbar />
                 <div className="space-y-10">
                     <TripList />
                     <div className="flex justify-around">
-                        <button className='border text-white rounded hover:bg-blue-300'>Add Trip</button>
-                        <button className="border text-white rounded hover:bg-blue-300">Edit Trip</button>
+                        <button className='shadow-lg border-2 border-spacing-3 border-orange-300 bg-orange-300 rounded hover:text-white'>Add Trip</button>
                     </div>
                 </div>
         </>
