@@ -17,23 +17,23 @@ const TripList = async () => {
   //map iteration return allows for creating individual card components
   return (
     <>
-      <div>
-        <h1 className='text-6xl font-mono'>Current Trips</h1>
+      <div className="p-10">
+        <h1 className='text-6xl font-mono text-orange-400'>Current Trips</h1>
       </div>
       <div className="flex grid-flow-row justify-around align-middle">
         {tripResults.map((trip) => {
           return (
-            <div key={trip.code} className="border-4 border-orange-300 rounded-lg shadow-sm hover:shadow-2xl">
+            <div key={trip.code} className="border-4 border-orange-400 rounded shadow-sm hover:shadow-2xl">
               <img src={trip.image}/>
-              <div className="flex grid-flow-row justify-between bg-orange-300">
-                <div>
+              <div className="flex grid-flow-row justify-between bg-white">
+                <div className="p-5 space-y-2 font-bold text-orange-400">
                   <h1>{trip.name}</h1>
                   <h2>{trip.resort}</h2>
                   <h2>${trip.perperson}</h2>
                 </div>
-                <div className='flex'>
-                  <img className='hover:shadow-xl hover:bg-orange-400' src="/edit.png" width='60px'/>
-                  <img className='hover:shadow-xl hover:bg-orange-400'src="/trash.png" width='60px'/>
+                <div className='flex p-5 justify-between'>
+                  <img className='hover:shadow-md ' src="/edit.png" width='40px'/>
+                  <img className='hover:shadow-md 'src="/trash.png" width='40px'/>
                 </div>
               </div>
             </div>)

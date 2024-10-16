@@ -8,7 +8,7 @@
 import { z } from "zod";
 import { sql } from "@vercel/postgres";
 //imports sql functionality from vercel
-export default async function createTrip (data) {
+export async function createTrip (data) {
     let code = data.get('code')?.valueOf();
     let name = data.get('name')?.valueOf();
     let resort = data.get('resort')?.valueOf();
