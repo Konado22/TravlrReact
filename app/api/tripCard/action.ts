@@ -4,11 +4,17 @@
 // Version     : 1.0
 // Description : Implement logic for singular trip component
 //============================================================================
+"use server"
 import { sql } from "@vercel/postgres";
+import { useParams } from "next/navigation";
 //imports sql functionality from vercel
 
- export default async function Tripcard () {
+export async function Tripcard(trip) {
+  try {
     //get singular trip by code
-    const getATrip = await sql`SELECT * from trip WHERE code = $`;
-    const result= getATrip.fields;
+
   }
+  catch (error) {
+    return error;
+  }
+}

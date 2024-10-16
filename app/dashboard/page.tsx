@@ -5,7 +5,7 @@
 // Description : Render of dashboard page with components
 //============================================================================
 import Navbar from "../navbar/page";
-import TripList from "../lib/tripList/page";
+import TripList from "../api/tripList/page";
 import React from "react";
 //main dashboard of application renders navbar component as well as server-call to get tripList
 export default async function Dashboard() {
