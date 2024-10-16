@@ -8,7 +8,7 @@
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { sql } from "@vercel/postgres";
-import { redirect } from "next/dist/server/api-utils";
+import { NextResponse } from "next/server";
 //imports sql functionality from vercel
 export async function createTrip (formData:FormData) {
     "use server"
@@ -20,6 +20,7 @@ export async function createTrip (formData:FormData) {
         perPerson:z.string().min(1),
         image:z.string().min(1),
     })
+    //parses the formData against the schema
     const parse = schema.safeParse({
         code: formData.get('code'),
         name: formData.get('name'),
@@ -27,6 +28,7 @@ export async function createTrip (formData:FormData) {
         perPerson: formData.get('perPerson'),
         image:formData.get('image')
     })
+    //if successful parse the results and insert into sql statement
     if (!parse.success) {
         console.log("SUCCESS")
     }
@@ -34,17 +36,14 @@ export async function createTrip (formData:FormData) {
     try {
         await sql`INSERT INTO trip(code,name,resort,perperson,image)
         VALUES(${data.code},${data.name}, ${data.resort}, ${data.perPerson}, ${data.image})`
-        revalidatePath('/tripList');
+        revalidatePath('/api/tripList');
+        revalidatePath('/dashboard');
+        revalidatePath('/');
+        
         
         
         return{message: "Successfully created Trip"}
     } catch (e) {
-        console.log("UNSUCCESSFUL");
+        return{message: "FAIL"}
       }
-    }
-    //gather form data
-    //post request to add a new trip on click (FORM) TRIP(code, name, resort, perPerson, image) 
-
-    //const insertTrip = await sql`INSERT INTO trip (code, name, resort, perPerson, image) VALUES ()`;
-    //const data = insertTrip.fields;
-  
+    }  

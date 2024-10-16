@@ -24,12 +24,12 @@ const TripList = async () => {
         <div className="p-10">
           <h1 className='text-6xl font-mono text-orange-400'>Current Trips</h1>
         </div>
-        <div className="flex grid-flow-row justify-around align-middle">
+        <div className="flex flex-row flex-wrap grid-flow-col space-x-10 p-10 justify-evenly">
           {tripResults.map((trip) => {
             return (
               <div key={trip.code} className="border-4 border-orange-400 rounded shadow-sm hover:shadow-2xl">
-                <img src={trip.image} />
-                <div className="flex grid-flow-row justify-between bg-white">
+                <img src={trip.image}height={'100'} width={'200'}/>
+                <div className="bg-white">
                   <div className="p-5 space-y-2 font-bold text-orange-400">
                     <h1>{trip.name}</h1>
                     <h2>{trip.resort}</h2>
