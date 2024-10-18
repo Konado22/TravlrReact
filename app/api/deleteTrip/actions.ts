@@ -17,6 +17,6 @@ export default async function DeleteTrip() {
     }
     //return error 
     catch (error) {
-        return error(error);
+        return console.log(error(error));
     }
 }

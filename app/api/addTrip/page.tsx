@@ -9,12 +9,13 @@ import Navbar from "@/app/navbar/page";
 import { createTrip } from "./actions";
 
 export default async function addTripPage() {
-    "use server"
+"use server"
 
     return (
         <div className="flex justify-center flex-col">
             <Navbar />
-            <h1 className="text-6xl font-bold text-orange-400">Add Trip</h1>
+            <h1 className="p-10 font-mono text-6xl font-bold text-orange-400">Add Trip</h1>
+            {/* type discrepancy due to npm package version, looking for solution in release but still compiles */}
             <form className='space-y-10 p-10 ' action={createTrip}>
                 <div className="flex space-x-10 justify-center">
                     <label htmlFor='code' className='text-orange-400 font-bold'>Code</label>
@@ -25,15 +26,15 @@ export default async function addTripPage() {
                     <input required type="text" id="name" name="name" className="border-2 border-orange-400"></input>
                 </div>
                 <div className="flex space-x-10 justify-center">
-                    <label htmlFor='resort' className='text-orange-400 font-bold'>resort</label>
+                    <label htmlFor='resort' className='text-orange-400 font-bold'>Resort</label>
                     <input required type="text" id="resort" name="resort" className="border-2 border-orange-400"></input>
                 </div>
                 <div className="flex space-x-2 justify-center">
-                    <label htmlFor='perPerson' className='text-orange-400 font-bold'>perPerson</label>
+                    <label htmlFor='perPerson' className='text-orange-400 font-bold'>PerPerson</label>
                     <input required type="text" id="perPerson" name="perPerson" className="border-2 border-orange-400"></input>
                 </div>
                 <div className="flex space-x-10 justify-center">
-                    <label htmlFor='image' className='text-orange-400 font-bold'>image</label>
+                    <label htmlFor='image' className='text-orange-400 font-bold'>Image</label>
                     <input required type="text" id="image" name="image" className="border-2 border-orange-400"></input>
                 </div>
                 <div className="flex justify-center">

@@ -40,8 +40,7 @@ export async function createTrip (formData:FormData) {
         VALUES(${data.code},${data.name}, ${data.resort}, ${data.perPerson}, ${data.image})` 
             revalidatePath('/api/tripList');
             revalidatePath('/dashboard');
-            revalidatePath('/');
-            redirect('/dashboard')
+            redirect('/dashboard');
         //revalidate path clears cache for nextjs rendering to utilize new fetch rather than previously cached fetch
         return{message: "Successfully created Trip"}
     } catch (e) {
