@@ -2,7 +2,7 @@ import Navbar from "@/app/navbar/page";
 import UpdateTrip from "./action";
 
 export default function UpdateTripPage(trip) {
-    const codeValue = localStorage.getItem('code');
+    //import props from component to populate values of the form
     return(
     <div className="flex justify-center flex-col">
         <Navbar />
@@ -10,7 +10,7 @@ export default function UpdateTripPage(trip) {
         <form className='space-y-10 p-10 ' action={UpdateTrip}>
             <div className="flex space-x-10 justify-center">
                 <label htmlFor='code' className='text-orange-400 font-bold'>Code</label>
-                <input required type="text" id="code" name="code" className="border-2 border-orange-400" value={codeValue}></input>
+                <input required type="text" id="code" name="code" className="border-2 border-orange-400"></input>
             </div>
             <div className="flex space-x-10 justify-center">
                 <label className='text-orange-400 font-bold' htmlFor='name'>Name</label>

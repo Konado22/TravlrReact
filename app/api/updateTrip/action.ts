@@ -39,8 +39,7 @@ export default async function UpdateTrip(formData:FormData) {
             const update = await sql`UPDATE trip SET name=${data.name}, resort=${data.resort}, perperson= ${data.perPerson}, image = ${data.image} WHERE code = ${data.code}`;
             const result = update.rows;
             revalidatePath('/api/tripList');
-            return console.log('SUCCESS',result);
-            
+            return console.log('SUCCESS',result);        
         }
         catch (error) {
             console.log(error);

@@ -7,7 +7,6 @@
 import { sql } from "@vercel/postgres";
 import React from "react";
 import DeleteTrip from "../deleteTrip/actions";
-import UpdateTrip from "../updateTrip/action";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { revalidatePath } from "next/cache";
@@ -44,8 +43,8 @@ const TripList = async () => {
                     <h2>${trip.perperson}</h2>
                   </div>
                   <div className='flex p-5 justify-between'>
-                    <Link href={'/api/updateTrip'}><img className='hover:shadow-md ' src="/edit.png" width='40px' onClick={()=>localStorage.setItem('code',trip.code)}/></Link>
-                    {/* <img className='hover:shadow-md ' src="/trash.png" width='40px' /> */}
+                    <Link href={'/api/updateTrip'}><img className='hover:shadow-md ' src="/edit.png" width='40px'/></Link>
+                    <img className='hover:shadow-md ' src="/trash.png" width='40px' />
                   </div>
                 </div>
               </div>)
