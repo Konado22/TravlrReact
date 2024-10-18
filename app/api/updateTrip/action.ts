@@ -5,6 +5,7 @@
 // Description : Logic for updating a trip by trip.code through form
 //============================================================================
 import { sql } from "@vercel/postgres";
+import { revalidatePath } from "next/cache";
 import {z} from 'zod';
 
 //imports sql functionality from vercel NextJS packages
@@ -30,13 +31,16 @@ export default async function UpdateTrip(formData:FormData) {
     })
     //if successful parse the results and insert into sql statement
     if (!parse.success) {
-        console.log("SUCCESS")
+        console.log("SUCCESSFUL UPDATE")
     }
     const data=parse.data
         try {
             //try to update by code with sql request and validation by zod/form
             const update = await sql`UPDATE trip SET name=${data.name}, resort=${data.resort}, perperson= ${data.perPerson}, image = ${data.image} WHERE code = ${data.code}`;
-            return console.log('SUCCESS', update.rows);
+            const result = update.rows;
+            revalidatePath('/api/tripList');
+            return console.log('SUCCESS',result);
+            
         }
         catch (error) {
             console.log(error);

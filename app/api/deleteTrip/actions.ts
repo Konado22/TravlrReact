@@ -12,11 +12,10 @@ export default async function DeleteTrip() {
         //delete trip by Trip(code) TRIP(code, name, resort, perPerson, image)
         //try statements to test logic
         const delTrip = await sql`DELETE FROM trip WHERE trip.code = ${this.code} `;
-        const data = delTrip.fields
-        return {data}
+        return console.log(delTrip);
     }
     //return error 
     catch (error) {
-        return console.log(error(error));
+        return console.log(error);
     }
 }

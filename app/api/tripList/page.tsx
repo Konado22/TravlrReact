@@ -6,14 +6,22 @@
 //=================================================================================
 import { sql } from "@vercel/postgres";
 import React from "react";
-import Image from 'next';
 import DeleteTrip from "../deleteTrip/actions";
 import UpdateTrip from "../updateTrip/action";
+import { redirect } from "next/navigation";
+import Link from "next/link";
+import { revalidatePath } from "next/cache";
 //imports sql functionality from vercel
 //get ALL trips, pass to dashboard for rendering
+const handleUpdateClick = () => {
+  // Update state or props
+  redirect(`/api/updateTrip`);
+};
 const TripList = async () => {
   "use server"
   try {
+    //revalidate path to always refresh cache upon page load
+    revalidatePath('/api/tripList');
     const res = await sql`SELECT * FROM trip`;
     const tripResults = res.rows;
     //console.log(tripResults)
@@ -36,8 +44,8 @@ const TripList = async () => {
                     <h2>${trip.perperson}</h2>
                   </div>
                   <div className='flex p-5 justify-between'>
-                    <img className='hover:shadow-md ' src="/edit.png" width='40px' />
-                    <img className='hover:shadow-md ' src="/trash.png" width='40px' />
+                    <Link href={'/api/updateTrip'}><img className='hover:shadow-md ' src="/edit.png" width='40px' onClick={()=>localStorage.setItem('code',trip.code)}/></Link>
+                    {/* <img className='hover:shadow-md ' src="/trash.png" width='40px' /> */}
                   </div>
                 </div>
               </div>)
@@ -47,7 +55,7 @@ const TripList = async () => {
     )
   }
   catch (error) {
-    return error(error);
+    return console.log(error);
   }
 }
 export default TripList;

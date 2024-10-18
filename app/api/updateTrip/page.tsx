@@ -1,13 +1,16 @@
 import Navbar from "@/app/navbar/page";
+import UpdateTrip from "./action";
 
 export default function UpdateTripPage(trip) {
+    const codeValue = localStorage.getItem('code');
+    return(
     <div className="flex justify-center flex-col">
         <Navbar />
-        <h1  className="text-6xl font-bold text-orange-400">Add Trip</h1>
-        <form className='space-y-10 p-10 ' action=''>
+        <h1  className="p-10 font-mono text-6xl font-bold text-orange-400">Update Trip</h1>
+        <form className='space-y-10 p-10 ' action={UpdateTrip}>
             <div className="flex space-x-10 justify-center">
                 <label htmlFor='code' className='text-orange-400 font-bold'>Code</label>
-                <input required type="text" id="code" name="code" className="border-2 border-orange-400"></input>
+                <input required type="text" id="code" name="code" className="border-2 border-orange-400" value={codeValue}></input>
             </div>
             <div className="flex space-x-10 justify-center">
                 <label className='text-orange-400 font-bold' htmlFor='name'>Name</label>
@@ -30,4 +33,4 @@ export default function UpdateTripPage(trip) {
             </div>
         </form>
     </div>
-}
+)}
