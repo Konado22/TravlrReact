@@ -13,12 +13,17 @@ import {z} from 'zod';
 export default async function UpdateTrip(formData:FormData) {
     "use server"
     confirm('Are you sure');
-
-    //allows for server request in component. Update trip by code
-
-    try {
-
-    } catch (error) {
-       return 
+    if (!confirm) {
+        return "canceled operation"
     }
+    else {
+        try {
+            //try to update by code with sql request and validation by zod/form
+
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
+    //allows for server request in component. Update trip by code revalidate dashboard component on submit
 }

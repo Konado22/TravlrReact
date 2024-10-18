@@ -2,11 +2,10 @@
 // Name        : tripCard/page.tsx
 // Author      : Jesse Draper
 // Version     : 1.0
-// Description : Implement logic for singular trip component
+// Description : Implement logic for singular trip component get request
 //============================================================================
 "use server"
 import { sql } from "@vercel/postgres";
-import { useParams } from "next/navigation";
 //imports sql functionality from vercel
 
 export async function Tripcard(trip) {
