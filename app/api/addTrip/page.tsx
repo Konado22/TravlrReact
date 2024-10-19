@@ -1,5 +1,5 @@
 //==================================================================================================================
-// Name        : addTrip/action.tsx
+// Name        : addTrip/action.ts
 // Author      : Jesse Draper
 // Version     : 1.0
 // Description : page compoenent to handle form input and then utilize action logic for post request to server
@@ -7,15 +7,15 @@
 "use server"
 import Navbar from "@/app/navbar/page";
 import { createTrip } from "./actions";
-
+//use server declaration converts page to a server-component due to post request on submit
 export default async function addTripPage() {
 "use server"
-
+//form accepts user input and has parameters to provide extra input validation
     return (
         <div className="flex justify-center flex-col">
             <Navbar />
             <h1 className="p-10 font-mono text-6xl font-bold text-orange-400">Add Trip</h1>
-            {/* type discrepancy due to npm package version, looking for solution in release but still compiles */}
+            {/* type discrepancy due to npm package version, looking for solution in release but still compiles FIXED TYPE DIF ERRORS */}
             <form className='space-y-10 p-10 ' action={createTrip}>
                 <div className="flex space-x-10 justify-center">
                     <label htmlFor='code' className='text-orange-400 font-bold'>Code</label>

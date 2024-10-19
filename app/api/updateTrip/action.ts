@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : updateTrip/page.tsx
+// Name        : updateTrip/page.ts
 // Author      : Jesse Draper
 // Version     : 1.0
 // Description : Logic for updating a trip by trip.code through form
@@ -20,8 +20,8 @@ export default async function UpdateTrip(formData:FormData) {
         perPerson:z.string().min(1),
         image:z.string().min(1),
     })
-    //zod to confirm schema against requirements of database
-     //parses the formData against the schema
+//zod to confirm schema against requirements of database
+//parses the formData against the schema
      const parse = schema.safeParse({
         code: formData.get('code'),
         name: formData.get('name'),
@@ -29,7 +29,7 @@ export default async function UpdateTrip(formData:FormData) {
         perPerson: formData.get('perPerson'),
         image:formData.get('image')
     })
-    //if successful parse the results and insert into sql statement
+//if successful parse the results and insert into sql statement
     if (!parse.success) {
         console.log("SUCCESSFUL UPDATE")
     }
@@ -45,4 +45,4 @@ export default async function UpdateTrip(formData:FormData) {
             console.log(error);
         }
     }
-    //allows for server request in component. Update trip by code revalidate dashboard component on submit
+//allows for server request in component. Update trip by code revalidate dashboard component on submit

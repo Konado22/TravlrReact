@@ -17,6 +17,7 @@ export default async function Dashboard() {
             <Navbar />
                 <div className="space-y-10">
                     <TripList />
+                    {/* type discrepancy due to node version mismatch */}
                     <div className="flex justify-around">
                         <Link href={'/api/addTrip'} ><button className='shadow-lg border-2 border-spacing-3 border-orange-400 bg-wite rounded text-orange-400 p-2 hover:border-white hover:text-white'>Add Trip</button></Link>
                     </div>

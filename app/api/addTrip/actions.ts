@@ -13,7 +13,7 @@ import { redirect } from "next/navigation";
 //as pathvalidation tools and zob to test form against table schema
 export async function createTrip (formData:FormData) {
     "use server"
-    //use zod to test input against schema requirements for Trip
+    //use zod to test input against schema requirements for Trip can declare expected inputs through zod
     const schema = z.object({
         code:z.string().min(1),
         name:z.string().min(1),
@@ -21,7 +21,7 @@ export async function createTrip (formData:FormData) {
         perPerson:z.string().min(1),
         image:z.string().min(1),
     })
-    //parses the formData against the schema
+    //parses the formData against the schema with conditional catch statement to return successful parse
     const parse = schema.safeParse({
         code: formData.get('code'),
         name: formData.get('name'),
@@ -35,7 +35,7 @@ export async function createTrip (formData:FormData) {
     }
     const data=parse.data
     try {
-        //try to insert new trip into database using form information
+        //try to insert new trip into database using form information(form already contains validation for containing value as additional security)
         await sql`INSERT INTO trip(code,name,resort,perperson,image)
         VALUES(${data.code},${data.name}, ${data.resort}, ${data.perPerson}, ${data.image})` 
             revalidatePath('/api/tripList');

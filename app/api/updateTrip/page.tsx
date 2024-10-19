@@ -1,3 +1,9 @@
+//============================================================================
+// Name        : updateTrip/page.tsx
+// Author      : Jesse Draper
+// Version     : 1.0
+// Description : page rendering for updateTrip server-component and form
+//============================================================================
 import Navbar from "@/app/navbar/page";
 import UpdateTrip from "./action";
 

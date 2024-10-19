@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 //homepage, utilize Image for nextjs image formatting and link to route browser
 export default function Home() {
+  //root landing page utilizing Image and Link tags through NextJS
   return (
     <div className="flex flex-col gap-y-5">
       <img className="justify-start"></img>

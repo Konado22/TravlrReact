@@ -7,15 +7,14 @@
 import { sql } from "@vercel/postgres";
 import React from "react";
 import DeleteTrip from "../deleteTrip/actions";
-import { redirect } from "next/navigation";
 import Link from "next/link";
 import { revalidatePath } from "next/cache";
 //imports sql functionality from vercel
 //get ALL trips, pass to dashboard for rendering
-const handleUpdateClick = () => {
-  // Update state or props
-  redirect(`/api/updateTrip`);
-};
+// const handleUpdateClick = () => {
+//   // Update state or props
+//   redirect(`/api/updateTrip`);
+// };
 const TripList = async () => {
   "use server"
   try {
@@ -23,9 +22,9 @@ const TripList = async () => {
     revalidatePath('/api/tripList');
     const res = await sql`SELECT * FROM trip`;
     const tripResults = res.rows;
-    //console.log(tripResults)
-    //map iteration return allows for creating individual card components
+    //map iteration return allows for creating individual card components for each object in database
     //RETURN THE RESULT OF THE MAPPING EVERYTIME
+    //utilizes icons for functionality to move to server components for CRUD
     return (
       <>
         <div className="p-10">
@@ -54,6 +53,7 @@ const TripList = async () => {
     )
   }
   catch (error) {
+    //try catch to catch error with database or middleware
     return console.log(error);
   }
 }

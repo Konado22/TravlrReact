@@ -2,12 +2,13 @@
 // Name        : navbar/page.tsx
 // Author      : Jesse Draper
 // Version     : 1.0
-// Description : Navbar component for dashboard page
+// Description : static Navbar component for dashboard page
 //============================================================================
 import Image from "next/image";
 import Link from "next/link";
 //navbar for main dashboard page, future functionality to incoperate categories and blog stories
 export default function Navbar() {
+    //render navbar with future logic to expand upon site functionality.
     return (
         <div>
             <div className="flex flex-row gap-x-6 bg-orange-200 justify-between ">

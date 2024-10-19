@@ -10,7 +10,9 @@ import Link from "next/link";
 //FUTURE IMPLEMENTATION FOR CREATING A NEW USER
 //register new user page within database
 export default async function RegisterUser() {
-   
+    "use server"
+    //implmement server component
+   //implement form for logic as well as action file for logic 
     return (
         <div className=" flex-col grid justify-center space-y-20 min-w-max">
             <div className="justify-items-center">
@@ -31,7 +33,7 @@ export default async function RegisterUser() {
                     <Link href='/login'><h1 className="text-orange-400 hover:underline hover:text-white text-xl">Already have an account?</h1></Link>
                 </div>
                 <div className="flex justify-center">
-                    {/*find different arrow to use*/}
+                    {/*find different arrow to use for post prod*/}
                     <Link href='/'><Image src="/back.jpg" height={30} width={30} alt="back arrow" className="opacity-30 bg-blue-400 hover:outline-2" /></Link>
                 </div>
             </div>

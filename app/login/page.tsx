@@ -10,6 +10,9 @@ import Link from 'next/link';
 //login page will incorperate logic to allow user access to account
 //eventually aim to incoperate register user button for new user form
 export default function Login() {
+    "use server"
+    //server componet to handle login request
+    //trasition to form dynamic and implement zod for parsing user input from form
     return (
         <div className=" flex-col grid justify-center space-y-20 min-w-max">
             <div className="flex-col justify-center">
